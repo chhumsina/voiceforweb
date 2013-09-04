@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Voice for Web</title>
+
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="css/stylespeech.css"/>
+<link rel="shortcut icon" href="images/monkey.ico" />
+</head>
+<body>
+	<div class="content-img">
+		<img alt="full screen background image" src="images/background.png" id="full-screen-background-image" />
+	</div>
+	<div id="wrapper">
+		<input type="text" placeholder=" e.g. facebook.com" value="" x-webkit-speech />
+		<div class="success" style="display:none;"></div>
+		<div class="confirm" style="display:none;"></div>
+	</div>
+	
+	<script>
+	$(document).ready(function(){
+
+		$("input").focus(function () {
+			var value = $(this).val();	
+			if(null != value && '' != value){
+				var domainRegex = /(.*?)\.(com|net|org|info|coop|int|com\.au|co\.uk|org\.uk|ac\.uk|)/igm; 
+				if(domainRegex.test(value)){
+					$('.success').fadeIn("slow");
+					$('.confirm').hide();
+					window.setTimeout(function(){window.location="http://www."+value;},1500);
+				} else { 
+						$('.confirm').fadeIn("slow");
+					}
+			}	
+		});
+		
+	});
+
+</script>
+
+</body>
+</html>

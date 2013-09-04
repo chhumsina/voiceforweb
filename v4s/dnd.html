@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Dinosaur Land</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="css/styledrag.css" />
+<link rel="shortcut icon" href="images/drag/dino.ico" />
+
+<script type="text/javascript">
+	function dragStart(ev) {
+		ev.dataTransfer.effectAllowed = 'move';
+		ev.dataTransfer.setData("Text", ev.target.getAttribute('id'));
+		ev.dataTransfer.setDragImage(ev.target, 0, 0);
+		return true;
+	}
+	function dragEnter(ev) {
+		event.preventDefault();
+		return true;
+	}
+	function dragOver(ev) {
+		return false;
+	}
+	function dragDrop(ev) {
+		var src = ev.dataTransfer.getData("Text");
+		ev.target.appendChild(document.getElementById(src));
+		ev.stopPropagation();
+		return false;
+	}
+	$(document).ready(function() {
+		$('#finder').bind("drop", function() {
+			var value = $('#finder img').attr('alt');
+			if ($(this).find('img').length) {
+				window.setTimeout(function() {window.location = value;}, 1000);
+			}
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="place1">
+			<div id="split">
+				<img alt="http://dinosaurs.about.com/od/typesofdinosaurs/a/Archaeopteryx-Facts.htm" title="Archaeopteryx Facts" src="images/drag/dino1.png" id="dino1" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+				<img alt="http://dinosaurs.about.com/od/typesofdinosaurs/a/Archaeopteryx-Facts.htm" title="Archaeopteryx Facts" src="images/drag/dino 3.png" id="dino3" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			
+		</div>
+		<div class="place2">
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/pictures/dinosaurs/bones/dinosaureggs.html" title="Dinosaur Egg" src="images/drag/dino 2.png" id="dino2" draggable="true" ondragstart="return dragStart(event)" style="margin-left:35px; margin-top:15px;" />
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+			
+			</div>
+			
+		</div>
+		<div class="place3">
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/tyrannosaurusrex.html" title="Tyrannosaurusred" src="images/drag/dino 11.png" id="dino11" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/spinosaurus.html" title="Spinosaurus" src="images/drag/dino 9.png" id="dino9" draggable="true" ondragstart="return dragStart(event)" style="margin-top:35px;" />
+			</div>
+			<div id="split">
+				
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/carnotaurus.html" title="Carnotaurus" src="images/drag/dino 4.png" id="dino4" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/apatosaurus.html" title="Apatosaurus" src="images/drag/dino 7.png" id="dino7" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+				<img alt="http://dragcave.wikia.com/wiki/Dragon_Types" title="Dragon" src="images/drag/dino 5.png" id="dino5" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			
+		</div>
+		<div class="place4">
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/ankylosaurus.html" title="Ankylosaurus" src="images/drag/dino 10.png" id="dino10" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/triceratops.html" title="Triceratop" src="images/drag/dino 8.png" id="dino8" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+				<div id="finder" ondragenter="return dragEnter(event)" ondrop="return dragDrop(event)" ondragover="return dragOver(event)"></div>
+			</div>
+			<div id="split">
+			
+			</div>
+			<div id="split">
+				<img alt="http://www.sciencekids.co.nz/sciencefacts/dinosaurs/brachiosaurus.html" title="Brachiosaurus" src="images/drag/dino 6.png" id="dino6" draggable="true" ondragstart="return dragStart(event)" />
+			</div>
+			<div id="split">
+			
+			</div>
+			
+		</div>
+		
+	</div>
+	
+</body>
+</html>

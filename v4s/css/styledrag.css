@@ -1,0 +1,106 @@
+html {
+	background: url('../images/drag/background.png') no-repeat center center
+		fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.wrapper {
+	height: 600px;
+	margin: 0 auto;
+	width: 80%;
+}
+
+#finder {
+	-moz-user-select: none;
+	background: url("../images/drag/finder.png") repeat scroll 0 0
+		transparent;
+	float: left;
+	height: 146px;
+	margin: 10px;
+	padding: 10px;
+	width: 165px;
+}
+
+#dino1
+,
+#dino2
+,
+#dino3
+,
+#dino4
+,
+#dino5
+,
+#dino6
+,
+#dino7
+,
+#dino8
+,
+#dino9
+,
+#dino10
+,
+#dino11
+,
+{
+height
+:
+ 
+80
+px
+;
+
+	
+width
+:
+ 
+150
+px
+;
+
+
+}
+.place1,.place2,.place3,.place4 {
+	width: 100%;
+	height: 135px;
+	margin-bottom: 5px;
+}
+
+.place1 #split {
+	float: left;
+	height: 140px;
+	margin-left: 5px;
+	width: 141px;
+}
+
+.place2 #split {
+	float: left;
+	height: 140px;
+	margin-left: 5px;
+	width: 141px;
+}
+
+.place3 #split {
+	float: left;
+	height: 140px;
+	margin-left: 5px;
+	width: 141px;
+}
+
+.place4 #split {
+	float: left;
+	height: 140px;
+	margin-left: 5px;
+	width: 141px;
+}
+
+#finder img {
+	height: 100px;
+	margin-left: 33px;
+	margin-top: 35px;
+	width: 100px;
+}
